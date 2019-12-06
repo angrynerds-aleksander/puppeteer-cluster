@@ -1,4 +1,4 @@
-# Puppeteer Cluster
+# Puppeteer Cluster (Supports launch through Windows Subsystem for Linux (WSL) and in Electron apps)
 
 [![Build Status](https://api.travis-ci.org/thomasdondorf/puppeteer-cluster.svg?branch=master)](https://travis-ci.org/thomasdondorf/puppeteer-cluster)
 [![npm](https://badgen.now.sh/npm/v/puppeteer-cluster)](https://www.npmjs.com/package/puppeteer-cluster)
