@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-cluster",
-  "version": "0.15.2",
+  "version": "0.18.0",
   "description": "Cluster management for puppeteer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,33 +22,30 @@
     "cluster",
     "pool"
   ],
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "debug": "^4.1.1"
   },
   "peerDependencies": {
-    "puppeteer": "^1.5.0",
-    "chrome-launcher": "^0.10.5"
+    "puppeteer": "^1.5.0 || ^2.0.0"
   },
   "devDependencies": {
-    "@types/debug": "^4.1.1",
-    "@types/jest": "^24.0.6",
-    "@types/node": "https://github.com/shadaxv/node/tarball/master",
-    "@types/puppeteer": "^1.12.1",
-    "@types/puppeteer-core": "^1.9.0",
-    "@types/request": "^2.48.1",
-    "chrome-launcher": "^0.10.5",
-    "coveralls": "^3.0.3",
-    "express": "^4.16.4",
-    "jest": "^24.3.1",
-    "puppeteer": "^1.12.2",
-    "puppeteer-core": "^1.12.2",
-    "request": "^2.88.0",
+    "@types/debug": "^4.1.5",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "@types/puppeteer": "^2.0.0",
+    "@types/puppeteer-core": "^2.0.0",
+    "chrome-launcher": "^0.12.0",
+    "coveralls": "^3.0.9",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "puppeteer": "^2.0.0",
+    "puppeteer-core": "^2.0.0",
     "tree-kill": "^1.2.0",
-    "ts-jest": "^24.0.0",
-    "tslint": "^5.13.0",
-    "tslint-config-airbnb": "^5.11.0",
-    "typescript": "^3.3.3333"
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.7.3"
   },
   "jest": {
     "setupFilesAfterEnv": [

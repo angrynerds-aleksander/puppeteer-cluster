@@ -3,7 +3,7 @@ export default class SystemMonitor {
     private memoryUsage;
     private loads;
     private interval;
-    init(): Promise<{}>;
+    init(): Promise<unknown>;
     close(): void;
     private calcLoad;
     getCpuUsage(): number;

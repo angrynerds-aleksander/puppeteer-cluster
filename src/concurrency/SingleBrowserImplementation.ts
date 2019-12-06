@@ -1,5 +1,9 @@
 
 import * as puppeteer from 'puppeteer';
+import * as chromeLauncher from 'chrome-launcher';
+import * as util from 'util';
+// @ts-ignore
+import * as request from 'request';
 import ConcurrencyImplementation, { ResourceData } from './ConcurrencyImplementation';
 
 import { debugGenerator, timeoutExecute } from '../util';
@@ -38,7 +42,13 @@ export default abstract class SingleBrowserImplementation extends ConcurrencyImp
         }
 
         try {
-            this.browser = await this.puppeteer.launch(this.options) as puppeteer.Browser;
+            const browser: any = await chromeLauncher.launch(this.options);
+            const resp: any = await util.promisify(request)(`http://localhost:${browser.port}/json/version`);
+            const { webSocketDebuggerUrl }: any = JSON.parse(resp.body);
+            const chrome = await this.puppeteer.connect({
+                browserWSEndpoint: webSocketDebuggerUrl,
+            }) as puppeteer.Browser;
+            this.browser = chrome;
         } catch (err) {
             throw new Error('Unable to restart chrome.');
         }
@@ -49,7 +59,13 @@ export default abstract class SingleBrowserImplementation extends ConcurrencyImp
     }
 
     public async init() {
-        this.browser = await this.puppeteer.launch(this.options);
+        const browser: any = await chromeLauncher.launch(this.options);
+        const resp: any = await util.promisify(request)(`http://localhost:${browser.port}/json/version`);
+        const { webSocketDebuggerUrl }: any = JSON.parse(resp.body);
+        const chrome = await this.puppeteer.connect({
+            browserWSEndpoint: webSocketDebuggerUrl,
+        }) as puppeteer.Browser;
+        this.browser = chrome;
     }
 
     public async close() {

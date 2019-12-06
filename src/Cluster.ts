@@ -40,7 +40,7 @@ const DEFAULT_OPTIONS: ClusterOptions = {
     maxConcurrency: 1,
     workerCreationDelay: 0,
     puppeteerOptions: {
-        headless: true, // just for testing...
+        // headless: false, // just for testing...
     },
     monitor: false,
     timeout: 30 * 1000,
