@@ -1,5 +1,5 @@
 {
-  "name": "puppeteer-cluster",
+  "name": "puppeteer-cluster-electron",
   "version": "0.18.0",
   "description": "Cluster management for puppeteer",
   "main": "dist/index.js",
