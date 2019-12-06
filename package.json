@@ -14,16 +14,18 @@
   "author": "Thomas Dondorf",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thomasdondorf/puppeteer-cluster.git"
+    "url": "https://github.com/angrynerds-aleksander/puppeteer-cluster-electron.git"
   },
-  "homepage": "https://github.com/thomasdondorf/puppeteer-cluster",
+  "homepage": "https://github.com/angrynerds-aleksander/puppeteer-cluster-electron",
   "keywords": [
     "puppeteer",
     "cluster",
     "pool"
   ],
   "license": "MIT",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "debug": "^4.1.1"
   },
