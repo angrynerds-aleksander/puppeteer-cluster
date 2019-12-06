@@ -1,5 +1,5 @@
 {
-  "name": "puppeteer-cluster-electron",
+  "name": "@angrynerds-aleksander/puppeteer-cluster-electron",
   "version": "0.18.0",
   "description": "Cluster management for puppeteer",
   "main": "dist/index.js",
@@ -14,7 +14,7 @@
   "author": "Thomas Dondorf",
   "repository": {
     "type": "git",
-    "url": "https://github.com/angrynerds-aleksander/puppeteer-cluster-electron.git"
+    "url": "git://github.com/angrynerds-aleksander/puppeteer-cluster-electron.git"
   },
   "homepage": "https://github.com/angrynerds-aleksander/puppeteer-cluster-electron",
   "keywords": [
