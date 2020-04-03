@@ -35,6 +35,7 @@ export default class Browser extends ConcurrencyImplementation {
 
                 return {
                     resources: {
+                        context,
                         page,
                     },
 
@@ -56,13 +57,13 @@ export default class Browser extends ConcurrencyImplementation {
                 } catch (e) {}
 
                 // just relaunch as there is only one page per browser
-                browser = await chromeLauncher.launch(this.options);
-                // tslint:disable-next-line: max-line-length
-                resp = await util.promisify(request)(`http://localhost:${browser.port}/json/version`);
-                webSocketDebuggerUrl = JSON.parse(resp.body).webSocketDebuggerUrl;
-                chrome = await this.puppeteer.connect({
-                    browserWSEndpoint: webSocketDebuggerUrl,
-                }) as puppeteer.Browser;
+                // browser = await chromeLauncher.launch(this.options);
+                // // tslint:disable-next-line: max-line-length
+                // resp = await util.promisify(request)(`http://localhost:${browser.port}/json/version`);
+                // webSocketDebuggerUrl = JSON.parse(resp.body).webSocketDebuggerUrl;
+                // chrome = await this.puppeteer.connect({
+                //     browserWSEndpoint: webSocketDebuggerUrl,
+                // }) as puppeteer.Browser;
             },
         };
     }

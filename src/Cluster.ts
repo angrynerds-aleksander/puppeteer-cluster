@@ -53,6 +53,7 @@ const DEFAULT_OPTIONS: ClusterOptions = {
 
 interface TaskFunctionArguments<JobData> {
     page: Page;
+    context: any;
     data: JobData;
     worker: {
         id: number;

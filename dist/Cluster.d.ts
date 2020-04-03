@@ -21,6 +21,7 @@ declare type Partial<T> = {
 declare type ClusterOptionsArgument = Partial<ClusterOptions>;
 interface TaskFunctionArguments<JobData> {
     page: Page;
+    context: any;
     data: JobData;
     worker: {
         id: number;
