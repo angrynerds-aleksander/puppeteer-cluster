@@ -1,5 +1,5 @@
 
-import * as puppeteer from 'puppeteer';
+import * as puppeteer from 'puppeteer-core';
 
 import { ResourceData } from '../ConcurrencyImplementation';
 import SingleBrowserImplementation from '../SingleBrowserImplementation';

@@ -1,7 +1,7 @@
 
 import Job from './Job';
 import Cluster, { TaskFunction } from './Cluster';
-import { Page } from 'puppeteer';
+import { Page } from 'puppeteer-core';
 import { timeoutExecute, debugGenerator, log } from './util';
 import { inspect } from 'util';
 import { WorkerInstance, JobInstance } from './concurrency/ConcurrencyImplementation';

@@ -1,5 +1,5 @@
 
-import * as puppeteer from 'puppeteer';
+import * as puppeteer from 'puppeteer-core';
 import * as chromeLauncher from 'chrome-launcher';
 import * as util from 'util';
 // @ts-ignore

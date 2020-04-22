@@ -6,7 +6,7 @@ import Worker, { WorkResult } from './Worker';
 
 import * as builtInConcurrency from './concurrency/builtInConcurrency';
 
-import { LaunchOptions, Page } from 'puppeteer';
+import { LaunchOptions, Page } from 'puppeteer-core';
 import Queue from './Queue';
 import SystemMonitor from './SystemMonitor';
 import { EventEmitter } from 'events';
@@ -132,7 +132,7 @@ export default class Cluster<JobData = any, ReturnData = any> extends EventEmitt
         let puppeteer = this.options.puppeteer;
 
         if (this.options.puppeteer == null) { // check for null or undefined
-            puppeteer = require('puppeteer');
+            puppeteer = require('puppeteer-core');
         } else {
             debug('Using provided (custom) puppteer object.');
         }
